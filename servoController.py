@@ -11,5 +11,5 @@ def SetAngle(angle):
 	sleep(1)
 	GPIO.output(8, False)
 	pwm.ChangeDutyCycle(0)
-SetAngle(90) 
+SetAngle(166) 
 pwm.stop()
