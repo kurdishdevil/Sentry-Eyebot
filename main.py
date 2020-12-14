@@ -14,9 +14,12 @@ config = {
     'measurementId': "G-7KJYCKWH01"
 }
 firebase = Firebase(config)
-
+lastServoValue=0
 while True:
     db = firebase.database()
     servoValue = db.child("servo1").get().val()
-    servoController.SetAngle(servoValue)
-    print(servoValue)
+    if servoValue != lastServoValue:
+        servoController.SetAngle(servoValue)
+        print(servoValue)
+        lastServoValue=servoValue
+    
