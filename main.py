@@ -19,3 +19,4 @@ while True:
     db = firebase.database()
     servoValue = db.child("servo1").get().val()
     servoController.SetAngle(servoValue)
+    print(servoValue)
