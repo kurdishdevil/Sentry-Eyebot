@@ -16,10 +16,12 @@ config = {
 firebase = Firebase(config)
 lastServoValue=0
 while True:
-    db = firebase.database()
-    servoValue = db.child("servo1").get().val()
-    if servoValue != lastServoValue:
-        servoController.SetAngle(servoValue)
-        print(servoValue)
-        lastServoValue=servoValue
+    s=input('duty: ')
+    servoController.SetAngle(s)
+    #db = firebase.database()
+    #servoValue = db.child("servo1").get().val()
+    #if servoValue != lastServoValue:
+    #    servoController.SetAngle(servoValue)
+    #    print(servoValue)
+    #    lastServoValue=servoValue
     
