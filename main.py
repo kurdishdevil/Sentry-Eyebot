@@ -18,4 +18,4 @@ firebase = Firebase(config)
 while True:
     db = firebase.database()
     servoValue = db.child("servo1").get().val()
-    servoController.SetAngle(sevoValue)
+    servoController.SetAngle(servoValue)
