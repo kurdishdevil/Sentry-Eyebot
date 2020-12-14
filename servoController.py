@@ -8,7 +8,7 @@ def SetAngle(angle):
 
 	duty = angle / 18 + 2
 	GPIO.output(8, True)
-	pwm.ChangeDutyCycle(duty)
+	pwm.ChangeDutyCycle(angle)
 
 
 
