@@ -18,6 +18,7 @@ lastServoValue=0
 while True:
     s=float(input('duty: '))
     servoController.SetAngle(s)
+    print(s)
     #db = firebase.database()
     #servoValue = db.child("servo1").get().val()
     #if servoValue != lastServoValue:
