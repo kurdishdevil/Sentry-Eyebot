@@ -16,7 +16,7 @@ config = {
 firebase = Firebase(config)
 lastServoValue=0
 while True:
-    s=int(input('duty: '))
+    s=float(input('duty: '))
     servoController.SetAngle(s)
     #db = firebase.database()
     #servoValue = db.child("servo1").get().val()
